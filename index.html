@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://www.themoviedb.org/assets/2/favicon-32x32-543a21832c8931d3494a68881f6afcafc58e96c5d324345377f3197a37b367b5.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="./src/styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheMovieDB PoC</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="logo">TheMovieDB PoC</a>
+
+      <form class="search-form" id="form">
+        <input
+          name="text"
+          class="search-form-input"
+          type="text"
+          placeholder="Search"
+          id="form-input"
+        />
+      </form>
+    </header>
+    <div id="loader" class="loader"></div>
+    <div id="app" class="app"></div>
+
+    <script type="module" src="./src/script.js"></script>
+  </body>
+</html>

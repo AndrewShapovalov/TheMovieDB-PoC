@@ -1,0 +1,99 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #26a69a;
+  height: 70px;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .search-form .search-form-input {
+  background: #fff;
+  padding: 0 10px;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+.app {
+  padding: 2.5rem;
+}
+.counter {
+  font-size: 20px;
+}
+
+.preloader {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+}
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+  gap: 2rem;
+}
+
+.card {
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.card-image {
+  height: 100%;
+  position: relative;
+}
+.card-image img {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.card-title {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  padding: 24px;
+}
+.img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
+
+.card-title {
+  z-index: 2;
+}
