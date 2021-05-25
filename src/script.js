@@ -41,8 +41,11 @@ favoriteList.addEventListener("click", () => {
     document.querySelector(".button-wrapper").remove();
   }
   const favoriteMovies = localStorage.getItem("likedMovies");
-  const parsed = JSON.parse(favoriteMovies);
-  renderMovies(parsed, "favorite", true);
+  if (favoriteMovies) {
+    const parsed = JSON.parse(favoriteMovies);
+    renderMovies(parsed, "favorite", true);
+  }
+
   moviesContainer.classList.add("hide");
   favoriteContainer.classList.remove("hide");
 });
