@@ -11,6 +11,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <link rel="stylesheet" href="./src/styles.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,19 +24,25 @@
   <body>
     <header class="header">
       <a href="/" class="logo">TheMovieDB PoC</a>
-
-      <form class="search-form" id="form">
-        <input
-          name="text"
-          class="search-form-input"
-          type="text"
-          placeholder="Search"
-          id="form-input"
-        />
-      </form>
+      <ul class="nav">
+        <li class="movies-list active">Movies</li>
+        <li class="favorite-list">Favorite</li>
+      </ul>
+      <input
+        name="text"
+        class="input"
+        type="text"
+        placeholder="Search"
+        id="form-input"
+      />
     </header>
-    <div id="loader" class="loader"></div>
-    <div id="app" class="app"></div>
+
+    <div id="app" class="app">
+      <div class="start movies" id="movies">
+        <div class="movies"></div>
+      </div>
+      <div class="favorite movies hide" id="favorite"></div>
+    </div>
 
     <script type="module" src="./src/script.js"></script>
   </body>

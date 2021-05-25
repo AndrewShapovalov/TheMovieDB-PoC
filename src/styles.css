@@ -23,13 +23,41 @@ body {
   text-decoration: none;
 }
 
-.header .search-form .search-form-input {
+.nav {
+  display: flex;
+}
+.nav li {
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  padding: 20px;
+}
+.nav li:after,
+.nav li.active:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+.nav li:hover:after {
+  width: 100%;
+}
+.nav li.active {
+  font-weight: 700;
+}
+.nav li.active:after {
+  width: 100%;
+}
+header.header .input {
   background: #fff;
   padding: 0 10px;
   margin: 0;
   border-radius: 5px;
   font-size: 16px;
   border: none;
+  width: 250px;
 }
 
 .app {
@@ -47,8 +75,10 @@ body {
 .movies {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-
   gap: 2rem;
+}
+.movies.hide {
+  display: none;
 }
 
 .card {
@@ -58,6 +88,7 @@ body {
 }
 .card-image {
   height: 100%;
+  height: 300px;
   position: relative;
 }
 .card-image img {
@@ -96,4 +127,41 @@ body {
 
 .card-title {
   z-index: 2;
+}
+
+.like-button {
+  cursor: pointer;
+  /* transition: all 0.2s; */
+  right: 15px;
+  top: 15px;
+  position: absolute;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.like-button:hover {
+  /* background-color: #26a69a; */
+  background: linear-gradient(to bottom, #06b97c 0, #0d966e 89%) #06b97c;
+  box-shadow: 0 5px 9px 1px rgb(0 0 0 / 23%), 0 0 10px 0 rgb(0 212 135 / 70%);
+  color: white;
+}
+
+.like-button-active {
+  color: #26a69a;
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 2rem;
+    flex-direction: column;
+    height: auto;
+  }
 }

@@ -1,18 +1,24 @@
 const preloaderHTML = `
-<div class="preloader" id="preloader">
-   <div>Loading popular movies</div>
+   <div>Loading movies</div>
      <div class="progress">
        <div class="indeterminate"></div>
    </div>
-</div>
+
 `;
 
-const loader = document.getElementById("loader");
+const app = document.getElementById("app");
 
 export const preloader = (isLoading) => {
   if (isLoading === true) {
+    const loader = document.createElement("div");
+    loader.classList.add("preloader");
     loader.innerHTML = preloaderHTML;
+    app.append(loader);
   } else {
-    document.getElementById("preloader").remove();
+    const loader = document.querySelector(".preloader");
+
+    if (loader) {
+      document.querySelector(".preloader").remove();
+    }
   }
 };
